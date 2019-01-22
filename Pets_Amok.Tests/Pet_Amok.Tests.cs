@@ -7,8 +7,7 @@ namespace Pets_Amok.Tests
     {
         [Fact]
         public void Test1()
-        {
-        
+        { }   
 
 
 

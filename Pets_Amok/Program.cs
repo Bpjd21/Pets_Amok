@@ -6,9 +6,11 @@ namespace Pets_Amok
     {
         static void Main(string[] args)
         {
-            Wellcome_Page();
-         }
-        static void Wellcome_Page()
+            Welcome_Page();
+            
+
+        }
+        static void Welcome_Page()
         {
             Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
 
@@ -25,32 +27,21 @@ namespace Pets_Amok
             // Insert instructions later
            if (userInput.Equals("1"))
             {
-                Start_Game();
+                PetClass temp_pat = new PetClass();
+                Console.WriteLine("Hey Congrats!!! You adopted a cat");
+                Console.WriteLine("What do you want to name your cat? ");
+                temp_pat.Name = Console.ReadLine();
+                Console.WriteLine("What is your cat's age ? ");
+                temp_pat.Age = Convert.ToInt32(Console.ReadLine());
+
+
+                temp_pat.info();
             }
            
            
         }
-        static void Start_Game()
-        {
-            
-            Console.WriteLine("Press 1 for Organic)" 
-                // or press 2 for Robotic Pet");
-            string user_Choice = Console.ReadLine();
-            if (user_Choice.Equals("1"))
-            {
-                Console.WriteLine("Organic Pet");
-                Organic Daisy = new Organic("Daisy", "3");
-                Organic Tom = new Organic("Tom", "1");
-                Organic Thumper = new Organic("Thumper", "5");
-                Daisy.Print_info();
-                Tom.Print_info();
-                Thumper.Print_info();
-            }
-            else if(user_Choice.Equals("2"))
-{
-                Console.WriteLine("Robotic");
-}
+        
         }
        
     }
-}
+
