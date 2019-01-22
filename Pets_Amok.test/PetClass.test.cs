@@ -14,7 +14,24 @@ namespace Pets_Amok.test
         public void Test_Name()
         {
             PetClass dog = new PetClass();
-            Assert.Equal(100, dog.Hunger);
-        } 
+            dog.Name = "Bob";
+            Assert.Equal("Bob", dog.Name );
+        }
+
+        [Fact]
+        public  void Test_Entertain()
+        {
+            PetClass dog = new PetClass();
+          
+            Assert.Equal(60, dog.Play());
+        }
+
+        [Fact]
+        public void Test_helth()
+        {
+            PetClass dog = new PetClass();
+          
+            Assert.Equal(60, dog.Visit_To_Doctor());
+        }
     }
 }
