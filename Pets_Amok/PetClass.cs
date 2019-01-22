@@ -35,9 +35,7 @@ namespace Pets_Amok
            
             Console.WriteLine("My name is " + name + "  . I am a " + species + ".  I am  " + age+" years old!! ");
         }
-        public void Input()
-        {
-            
+        
         }
     }
 }

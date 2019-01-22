@@ -14,8 +14,7 @@ namespace Pets_Amok.test
         public void Test_Name()
         {
             PetClass dog = new PetClass();
-            dog.Name = "Bob";
-            Assert.Equal("Bob", dog.Name);
+            Assert.Equal(100, dog.Hunger);
         } 
     }
 }
