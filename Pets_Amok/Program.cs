@@ -13,6 +13,7 @@ namespace Pets_Amok
             Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
             Console.WriteLine("");
             Console.WriteLine("\nplease select from the options below.");
+            Console.WriteLine("\n======== Main_Menu ========");
             Console.WriteLine("press 1 to create your a pet ");
             Console.WriteLine("press 3 to play with your pet");
             Console.WriteLine("press 4 to take your pet to the doctor");
@@ -40,9 +41,8 @@ namespace Pets_Amok
                             Console.WriteLine("Congratulations! You have created " + temp_pet.Name + " the " + temp_pet.Species + " who is " + temp_pet.Age + " years old. \nEnjoy your new pet!\n");
                             temp_pet.Status();
 
-
-
-                            Console.WriteLine("\n \n \n \n \npress 3 to play with your pet");
+                            Console.WriteLine("\n \n \n \n======== Menu ========");
+                            Console.WriteLine("press 3 to play with your pet");                            
                             Console.WriteLine("press 4 to take your pet to the doctor");
                             Console.WriteLine("press 5 to feed your pet");
                             Console.WriteLine("press 6 to check your pet's status");
