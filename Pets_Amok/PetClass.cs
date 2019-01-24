@@ -7,32 +7,18 @@ namespace Pets_Amok
     public class PetClass
     {
 
-        int age;
-        string name;
-        string species = "Cat";
-
         int health = 50;
         int hunger = 50;
         int entertain = 50;
 
-        public int Age
-        {
-            get { return age; }
-            set { age = value; }
-        }
-        public string Name {
-            get { return name; }
-            set { name = value; }
-        }
-        public string Species
-        {
-            get { return species; }
-            set { species = value; }
-        }
+        public int Age { get ;  set ;}
+        public string Name { get ;  set ;}
+        public string Species{ get ;  set ;}
 
         public int Health
-        { get { return health; }
-            set { health = value; } }
+        { 
+		get { return health; }
+        set { health = value; } }
         public int Entertain
         {
             get { return entertain; }
@@ -45,7 +31,7 @@ namespace Pets_Amok
         public void Info()
         {
 
-            Console.WriteLine("My name is " + name + "  . I am a " + species + ".  I am  " + age + " years old!! ");
+            Console.WriteLine("My name is " + Name + "  . I am a " + Species + ".  I am  " + Age + " years old!! ");
         }
 
         public int Play()
