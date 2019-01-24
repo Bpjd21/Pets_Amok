@@ -65,7 +65,7 @@ namespace Pets_Amok
             hunger = hunger - 10;
             entertain = entertain - 10;
             return health;
-        //    Console.WriteLine("visited drrrrr");
+         
 
 
         }
