@@ -6,84 +6,83 @@ namespace Pets_Amok
     {
         static void Main(string[] args)
         {
-            PetClass temp_pet = new PetClass();
+            
+        Main_Menu();
+        }
+
+      
+       
+        static void Main_Menu()
+        {
+            Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
+            Console.WriteLine("");
+            Console.WriteLine("Please select from the options below.");
+
             bool running = true;
-            Welcome_Page();
+            PetClass temp_pet = new PetClass();
             while (running)
             {
                 string userInput = Console.ReadLine();
-
-                if (userInput.Equals("0"))
-                {
-                    running = false;
-                    Console.WriteLine("Bye Bye see u later!!!");
-                }
-                // Insert instructions later
-                else if (userInput.Equals("1"))
+                     
+                        
+                
                 {
 
+                    switch (userInput) { 
+                    case "1":
+                        Console.WriteLine("Create your pet");
+                        break;
+                    case "2":
+                            Console.WriteLine("Here are the instructions, under constructions");
+                            // working on instructions
+                        break;
+                    case "3":
+                        Console.WriteLine("Play with you pet");
+                        break;
+                    case "4":
+                        Console.WriteLine("Take your pet to the doctors:");
+                    break;
+                    case "5":
+                        Console.WriteLine("Feed you pet");
+                    break;
+                    case "6":
+                        Console.WriteLine("Check your pets status");
+                        break;
+                    case "7":
+                        Console.WriteLine("Check your pets info");
+                        break;
+                    case "8":
+                        Console.WriteLine("Here are our instructions");
+                        Console.WriteLine("press 3 to  play with cat");
+                        Console.WriteLine("press 4 to  take to doctor");
+                        Console.WriteLine("press 5 to  feed to cat");
+                        Console.WriteLine("press 6 to check your pets status");
+                        Console.WriteLine("press 7 to check your pet's info");
+                        Console.WriteLine("press 0 to quit");
+                        break;
+                        case "0":
+                        running = false;
+                        break;
+                                                
+                    default:
+                        Console.WriteLine("You entered an invalid response please select from menu again");
+                        break;
 
-                    Console.WriteLine("Hey Congrats!!! You adopted a cat");
-                    Console.WriteLine("What do you want to name your cat? ");
-                    temp_pet.Name = Console.ReadLine();
-                    Console.WriteLine("What is your cat's age ? ");
-                    temp_pet.Age = Convert.ToInt32(Console.ReadLine());
 
-                }
-                else if (userInput.Equals("2"))
-                {
-                    Console.WriteLine("press 0 to quit");
-                    Console.WriteLine("press 3 to  play with cat");
-                    Console.WriteLine("press 4 to  take to doctor");
-                    Console.WriteLine("press 5 to  feed to cat");
-                    Console.WriteLine("press 7 to check status");
-                    Console.WriteLine("press 8 to check status");
-                }
-                else if (userInput.Equals("3"))
-                {
-                    temp_pet.Play();
-                    Console.WriteLine("Pet went to play!!!");
 
+                    } }
+                        
+
+               
                 }
-                else if (userInput.Equals("4"))
-                {
-                    temp_pet.Visit_To_Doctor();
-                    Console.WriteLine("Pet went to Doctor!!!!");
-                }
-                else if (userInput.Equals("5"))
-                {
-                    temp_pet.Feed();
-                    Console.WriteLine("Pet ate some food");
-                }
-                else if (userInput.Equals("7"))
-                {
-                    Console.WriteLine(" \n My Current health level is " + temp_pet.Health +
-                                    "  \n My current hunger level is " + temp_pet.Hunger +
-                                    "\n My current entertainment level is " + temp_pet.Entertain);
-                }
-                else if (userInput.Equals("8"))
-                {
-                    temp_pet.info();
-                }
-                else
-                {
-                    Console.WriteLine("press 0 to quit");
-                    Console.WriteLine("press 3 to  play with cat");
-                    Console.WriteLine("press 4 to  take to doctor");
-                    Console.WriteLine("press 5 to  feed to cat");
-                    Console.WriteLine("press 7 to check status");
-                    Console.WriteLine("press 8 to check status");
-                }
+
+
             }
-        }
-        static void Welcome_Page()
-        {
-            Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
 
-            Console.WriteLine("Press to 1 play the game, 2 for the instructions to play the game, 0 to exit the game");
+
+
         }
+
     }
-   
-}
 
 
