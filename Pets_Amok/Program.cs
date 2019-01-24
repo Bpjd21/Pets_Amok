@@ -39,7 +39,10 @@ namespace Pets_Amok
                             Console.Clear();
                             Console.WriteLine("Congratulations! You have created " + temp_pet.Name + " the " + temp_pet.Species + " who is " + temp_pet.Age + " years old. \nEnjoy your new pet!\n");
                             temp_pet.Status();
-                            Console.WriteLine("press 3 to play with your pet");
+
+
+
+                            Console.WriteLine("\n \n \n \n \npress 3 to play with your pet");
                             Console.WriteLine("press 4 to take your pet to the doctor");
                             Console.WriteLine("press 5 to feed your pet");
                             Console.WriteLine("press 6 to check your pet's status");
@@ -52,19 +55,27 @@ namespace Pets_Amok
                         break;
                     case "3":
                         Console.WriteLine("\t\t\t\t ===== Play =====");
+                            temp_pet.Play();
                         break;
                     case "4":
-                        Console.WriteLine("\t\t\t\t Take your pet to the doctors:");
+                        Console.WriteLine("\t\t\t\t ==={0} visited  to doctor Vet===",temp_pet.Name);
+                            temp_pet.Visit_To_Doctor();
                     break;
                     case "5":
-                        Console.WriteLine("\t\t\t\t Feed you pet");
+                        
+                        Console.WriteLine("\t\t\t\t === {0} went to eat======",temp_pet.Name);
+                            temp_pet.Feed();
+
                     break;
                     case "6":
-                        Console.WriteLine("\t\t\t\t Check your pets status");
+                        Console.WriteLine("\t\t\t\t  === {0}'s sdtatus is ======",temp_pet.Name);
+                            temp_pet.Status();
                         break;
                     case "7":
                         Console.WriteLine("Check your pets info");
+                            temp_pet.Info();
                         break;
+
                     case "8":
                         Console.WriteLine("Here are our instructions");
                         Console.WriteLine("press 3 to  play with cat");

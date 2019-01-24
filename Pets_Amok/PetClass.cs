@@ -24,7 +24,7 @@ namespace Pets_Amok
             get { return entertain; }
             set { entertain = value; }
         } 
-          public int Hunger {
+        public int Hunger {
             get { return hunger; }
             set { hunger = value; }
         }
@@ -33,7 +33,6 @@ namespace Pets_Amok
 
             Console.WriteLine("My name is " + Name + "  . I am a " + Species + ".  I am  " + Age + " years old!! ");
         }
-
         public int Play()
         {
 
@@ -69,7 +68,9 @@ namespace Pets_Amok
         }
         public void Status()
         { Console.WriteLine("Your current pet's status is: " +
-            " \n Entertainment level is {0} \n Hunger level is {1}  \n Health level is {2}", Entertain, Hunger, Health); }
+            "\n Entertainment level is {0} " +
+            "\n Hunger level is        {1}  "+
+            "\n Health level is        {2}", Entertain, Hunger, Health); }
     }
 }
 
