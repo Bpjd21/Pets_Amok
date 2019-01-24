@@ -33,5 +33,12 @@ namespace Pets_Amok.test
           
             Assert.Equal(60, dog.Visit_To_Doctor());
         }
+        [Fact]
+        public void Test_Hunger()
+        {
+            PetClass catt = new PetClass();
+
+            Assert.Equal(60, catt.Feed());
+        }
     }
 }

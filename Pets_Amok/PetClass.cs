@@ -50,35 +50,36 @@ namespace Pets_Amok
         
         public int Play()
         {
-            Console.WriteLine("plaaayyy");
-            if (Entertain >= 90 || Entertain>= 0)
-            {
-                Entertain = Entertain + 10;
- 
-            }
             
-            return Entertain;
+           
+            entertain = entertain+ 10;
+            hunger = hunger - 10;
+            return entertain;
+             
+            
         }
         public int Visit_To_Doctor()
         {
-            if (health <= 90 || health >= 0)
-            {
-                health = health + 10;
-                
-            }
+
+            health = health + 10;
+            hunger = hunger - 10;
+            entertain = entertain - 10;
             return health;
-            Console.WriteLine("visited drrrrr");
+        //    Console.WriteLine("visited drrrrr");
+
 
         }
         public int Feed()
         {
-            if (hunger <= 90 || hunger >= 0)
+           
+            if (hunger <= 90 && hunger >= 0)
             {
-                hunger = health + 10;
+                hunger = hunger + 10;
 
             }
             return hunger;
-            Console.WriteLine("feeeeeeeeeed");
+            
+
 
         }
 
