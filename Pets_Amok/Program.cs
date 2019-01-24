@@ -5,13 +5,9 @@ namespace Pets_Amok
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {           
         Main_Menu();
-        }
-
-      
-       
+        } 
         static void Main_Menu()
         {
             Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
@@ -29,12 +25,8 @@ namespace Pets_Amok
             PetClass temp_pet = new PetClass();
             while (running)
             {
-                string userInput = Console.ReadLine();
-                     
-                        
-                
+                string userInput = Console.ReadLine();               
                 {
-
                     switch (userInput) { 
                     case "1":
                         Console.WriteLine("\t\t\t\t Create your pet");
@@ -44,8 +36,16 @@ namespace Pets_Amok
                         temp_pet.Age = Convert.ToInt32(Console.ReadLine());
                         Console.Write("What species is your pet?  ");
                         temp_pet.Species = Console.ReadLine();
-                            Console.WriteLine("Congratulations! You have created " + temp_pet.Name + " the " + temp_pet.Species + " who is " + temp_pet.Age + " years old. \nEnjoy your new pet!");
-                        break;
+                            Console.Clear();
+                            Console.WriteLine("Congratulations! You have created " + temp_pet.Name + " the " + temp_pet.Species + " who is " + temp_pet.Age + " years old. \nEnjoy your new pet!\n");
+                            temp_pet.Status();
+                            Console.WriteLine("press 3 to play with your pet");
+                            Console.WriteLine("press 4 to take your pet to the doctor");
+                            Console.WriteLine("press 5 to feed your pet");
+                            Console.WriteLine("press 6 to check your pet's status");
+                            Console.WriteLine("press 7 to check your pet's info");
+                            Console.WriteLine("press 0 to quit");
+                            break;
                     case "2":
                             Console.WriteLine("Here are the instructions, under constructions ");
                             // working on instructions
