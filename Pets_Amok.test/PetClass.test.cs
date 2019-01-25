@@ -61,7 +61,7 @@ namespace Pets_Amok.test
             Assert.Equal(40, expected);
         }
         [Fact]
-        public void Test_constructor()
+        public void Test_constructor() //After create constructor testing if Name holds  value
         {
             //ARRANGE
             PetClass pet = new PetClass("Bob",12,"Lion");
@@ -69,7 +69,7 @@ namespace Pets_Amok.test
             string  testname = pet.Name;
             //ASSERT
             Assert.Equal("Bob", testname);
-        }//After create constructor testing if Name holds  value
+        }
     }
 }
 
