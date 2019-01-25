@@ -6,15 +6,11 @@ namespace Pets_Amok
 {
     public class PetClass
     {
-
-        int health = 50;
-        int hunger = 50;
-        int entertain = 50;
-
+        //Pet attritbutes
         public int Age { get ;  set ;}
         public string Name { get ;  set ;}
         public string Species{ get ;  set ;}
-
+        //Constructors
         public PetClass(string name, int age, string species)
         {
             Name = name;
@@ -25,7 +21,11 @@ namespace Pets_Amok
         {
 
         }
+
         //Pet's status
+        int health = 50;
+        int hunger = 50;
+        int entertain = 50;
         public int Health
         { 
 		get { return health; }
@@ -39,13 +39,7 @@ namespace Pets_Amok
             get { return hunger; }
             set { hunger = value; }
         }
-
-
-        public void Info()
-        {
-
-            Console.WriteLine("My name is " + Name + "  . I am a " + Species + ".  I am  " + Age + " years old!! ");
-        }
+        // entertainment with pet
         public int Play()
         {
 
@@ -58,32 +52,23 @@ namespace Pets_Amok
         }
         public int Visit_To_Doctor()
         {
-
-            health = health + 10;
-            hunger = hunger - 10;
-            entertain = entertain - 10;
-            return health;
-
-
-
-        }
+            Health = Health + 10;
+            Hunger = Hunger - 10;
+            Entertain = Entertain - 10;
+            return Health;}
         public int Feed()
+        {Hunger = Hunger + 10;
+            return Hunger;}
+         //Pet details
+        public void Info()
         {
-
-
-            hunger = hunger + 10;
-
-
-            return hunger;
-
-
-
+            Console.WriteLine("My name is " + Name + "  . I am a " + Species + ".  I am  " + Age + " years old!! ");
         }
-        public void Status()
-        { Console.WriteLine("Your current pet's status is: " +
-            "\n Entertainment level is {0} " +
-            "\n Hunger level is        {1}  "+
-            "\n Health level is        {2}", Entertain, Hunger, Health); }
-    }
+        public void Status() { 
+               Console.WriteLine("\t\t\t Hunger :  {0}",Hunger);
+                        Console.WriteLine("\t\t\t Health :  {0}", Health);
+                        Console.WriteLine("\t\t\t Entertainment : {0}",Entertain);
+        }
+}
 }
 
