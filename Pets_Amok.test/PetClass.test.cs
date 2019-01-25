@@ -29,7 +29,7 @@ namespace Pets_Amok.test
             Assert.Equal(40, dog.Entertain);
         }
         [Fact]
-        public void Test_helth()
+        public void Test_health()
         {
             //ARRANGE
             PetClass dog = new PetClass();
@@ -39,7 +39,7 @@ namespace Pets_Amok.test
             Assert.Equal(60, health_level);
         }
         [Fact]
-        public void Test_Hunger()
+        public void Test_Hunger_Levels_Increase()
         {
             //ARRANGE
             PetClass pet = new PetClass();
@@ -60,6 +60,17 @@ namespace Pets_Amok.test
             //ASSERT
             Assert.Equal(40, expected);
         }
-        
+        [Fact]
+        public void Test_constructor()
+        {
+            //ARRANGE
+            PetClass pet = new PetClass("Bob",12,"Lion");
+            //ACT
+            string  testname = pet.Name;
+            //ASSERT
+            Assert.Equal("Bob", testname);
+        }//After create constructor testing if Name holds  value
     }
 }
+
+
