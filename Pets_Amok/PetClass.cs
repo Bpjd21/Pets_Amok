@@ -15,6 +15,17 @@ namespace Pets_Amok
         public string Name { get ;  set ;}
         public string Species{ get ;  set ;}
 
+        public PetClass(string name, int age, string species)
+        {
+            Name = name;
+            Age = age;
+            Species = species;
+        }
+        public PetClass()
+        {
+
+        }
+        //Pet's status
         public int Health
         { 
 		get { return health; }
@@ -28,6 +39,8 @@ namespace Pets_Amok
             get { return hunger; }
             set { hunger = value; }
         }
+
+
         public void Info()
         {
 
