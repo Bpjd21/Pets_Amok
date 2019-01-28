@@ -16,7 +16,7 @@ namespace Pets_Amok
             shelter.Add(new PetClass("Kitty", 6, "Dog"));
             shelter.Add(new PetClass("Sammy", 12, "Dog"));
             shelter.Add(new PetClass("Killian", 10, "Dog"));
-            shelter.Add(new PetClass("Honey Brown", 2, "Dog"));
+            shelter.Add(new PetClass("Honey", 2, "Dog"));
             shelter.Add(new PetClass("Killer", 5, "Dog"));
 
             Main_Menu(shelter);       
@@ -41,15 +41,15 @@ namespace Pets_Amok
                     case "1":
                         Console.WriteLine("\t\t\t\t Create your pet");
                         Console.Write("\nWhat would you like to name your pet?  ");
-                        temp_pet.Name = Console.ReadLine();
+                        string name = Console.ReadLine();
                         Console.Write("How old is your pet?  ");
-                        temp_pet.Age = Convert.ToInt32(Console.ReadLine());
+                        int age = Convert.ToInt32(Console.ReadLine());
                         Console.Write("What species is your pet?  ");
-                        temp_pet.Species = Console.ReadLine();                        
+                        string species = Console.ReadLine();                        
                             Console.Clear();
-                            Console.WriteLine("Congratulations!\n\nYou have created " + temp_pet.Name + " the " + temp_pet.Species + " who is " + temp_pet.Age + " years old. \n\n");
+                            Console.WriteLine("Congratulations!\n\nYou have created " + name + " the " + species + " who is " + age + " years old. \n\n");
                             Console.WriteLine("We have moved " + temp_pet.Name + " to our shelter");
-                            anyPet.Add(temp_pet);
+                            anyPet.Add(new PetClass(name, age, species));
                             Console.WriteLine();
                             Console.WriteLine("\n \n----Please select from the options below to continue----");
                             Console.WriteLine("\npress 2 to view all the animals in our shelter");
@@ -114,7 +114,7 @@ namespace Pets_Amok
 
             for (int i = 0; i <print.Count; i++)
             {
-                Console.WriteLine("\t\t{0}    {1}   {2}    {3}   {4}   {5}   {6}", i.ToString(), print[i].Name, print[i].Age, print[i].Species, print[i].Hunger, print[i].Health, print[i].Entertain);
+                Console.WriteLine("\t\t{0,0}    {1,-4}   {2,-6}    {3,8}   {4,10}   {5,12}   {6,14}", i.ToString(), print[i].Name, print[i].Age, print[i].Species, print[i].Hunger, print[i].Health, print[i].Entertain);
             }
         }
         static void Submenu(PetClass anypet)
