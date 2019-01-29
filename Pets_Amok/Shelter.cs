@@ -30,6 +30,7 @@ namespace Pets_Amok
         }
         public void Addopt(int Id)
         {
+         
             Pet.RemoveAt(Id);
         }
         public void Print_List()
@@ -57,10 +58,29 @@ namespace Pets_Amok
  
             }
 }
+        public void TakeallofthemtoDoctor()
+        {
+            for (int i = 0; i < Pet.Count; i++)
+            {
+                Pet[i].Visit_To_Doctor();
+
+            }
+        }
+        public void Cage() //Under Construction!
+        { }
         public PetClass Select_Pet(int id)
         {
-
+            Pet[id].Tick();
             return Pet[id];
+           
+        }
+        public void TickAllOfThem()
+
+        {
+            for(int i = 0; i < Pet.Count; i++)
+            {
+                Pet[i].Tick();
+            }
         }
         
     }
