@@ -23,29 +23,66 @@ namespace Pets_Amok
         }
 
         //Pet's status
-        int health = 50;
-        int hunger = 50;
-        int entertain = 50;
+        int health = 50; //min 0 max 100
+        int hunger = 50; //min 0 max 100
+        int entertain = 50; //min 0 max 100
         public int Health
-        { 
-		get { return health; }
-        set { health = value; } }
+        {
+            get { return health; }
+            set
+            {
+                if (health > 0 && health < 100)
+                { health = value; }
+                else if (health == 100)
+                {
+                    Console.WriteLine("Your pet is in great Shape!!! Does not need to visit veterinarian");
+                }
+                else if (health < 30)
+                {
+                    Console.WriteLine("Your pet is not feeling good!!! please take him to the veterinarian!!!");
+                }
+            }
+        }
         public int Entertain
         {
             get { return entertain; }
-            set { entertain = value; }
+            set {
+                if (entertain > 0 && entertain < 100)
+                { entertain = value; }
+                else if (entertain == 100)
+                {
+                    Console.WriteLine("Your pet is in super HAPPYYY!!!You don't need to play with it any more");
+                }
+                else if (entertain < 30)
+                {
+                    Console.WriteLine("Your pet is bored!!! You should play with it!!!");
+                }
+
+            }
         } 
         public int Hunger {
             get { return hunger; }
-            set { hunger = value; }
+            set
+            {
+                if (hunger > 0 && hunger < 100)
+                { hunger = value; }
+                else if (hunger == 100)
+                {
+                    Console.WriteLine("Your pet is completely full !!! please stop feeding it.");
+                }
+                else if (hunger < 30)
+                {
+                    Console.WriteLine("Your pet is starving !!! Please feed it !!!");
+                }
+            }
         }
         // entertainment with pet
         public int Play()
         {
 
 
-            entertain = entertain + 10;
-            hunger = hunger - 10;
+            Entertain = Entertain + 10;
+            Hunger = Hunger - 10;
             return entertain;
 
 
@@ -57,8 +94,10 @@ namespace Pets_Amok
             Entertain = Entertain - 10;
             return Health;}
         public int Feed()
-        {Hunger = Hunger + 10;
-            return Hunger;}
+        {
+            Hunger = Hunger + 10;
+            return Hunger;
+        }
          //Pet details
         public void Info()
         {
