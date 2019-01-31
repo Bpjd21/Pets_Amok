@@ -28,17 +28,15 @@ namespace Pets_Amok
         {
             Pet.Add(pet);
         }
-        public void Addopt(int Id)
-        {
-         
+        public void Adopt(int Id)
+        {        
             Pet.RemoveAt(Id);
         }
         public void Print_List()
         {
             Console.WriteLine("\tID | NAME      |AGE|SPECIE|HUNGER|HEALTH|ENTERTAINMENT|");
             for (int i = 0; i < Pet.Count; i++)
-            {
-                
+            {  
                 Console.WriteLine("\t{0}   {1}   {2}  {3} {4} {5}  {6}", 
                     i.ToString().PadRight(2),
                     Pet[i].Name.PadRight(8).ToString(),
@@ -46,8 +44,7 @@ namespace Pets_Amok
                     Pet[i].Species.ToString().PadRight(8), 
                     Pet[i].Hunger.ToString().PadRight(6),
                     Pet[i].Health.ToString().PadRight(6), 
-                    Pet[i].Entertain.ToString().PadRight(2));
-                
+                    Pet[i].Entertain.ToString().PadRight(2));       
             }
         }
         public  void FeedAll()
@@ -55,7 +52,6 @@ namespace Pets_Amok
             for (int i = 0; i < Pet.Count; i++)
             {
                 Pet[i].Feed();
- 
             }
 }
         public void TakeallofthemtoDoctor()
@@ -63,16 +59,13 @@ namespace Pets_Amok
             for (int i = 0; i < Pet.Count; i++)
             {
                 Pet[i].Visit_To_Doctor();
-
             }
         }
         public void Cage() //Under Construction!
         { }
         public PetClass Select_Pet(int id)
         {
-            Pet[id].Tick();
-            return Pet[id];
-           
+                return Pet[id];
         }
         public void TickAllOfThem()
 
@@ -82,6 +75,12 @@ namespace Pets_Amok
                 Pet[i].Tick();
             }
         }
-        
+        public void Checkstats()
+        {
+            for(int i = 0; i < Pet.Count; i++)
+            {
+              //   
+            }
+        }
     }
 }
