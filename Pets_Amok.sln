@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pets_Amok", "Pets_Amok\Pets_Amok.csproj", "{33BC26A0-3DE2-4113-9D8E-C615670127A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pets_Amok.test", "Pets_Amok.test\Pets_Amok.test.csproj", "{175F3081-72E5-4D23-BC55-4BFC9F6B1966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pets_Amok.test", "Pets_Amok.test\Pets_Amok.test.csproj", "{175F3081-72E5-4D23-BC55-4BFC9F6B1966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboticPetClassTests", "RoboticPetClassTests\RoboticPetClassTests.csproj", "{136EA958-3DDD-44B8-B357-E6AFCBF43A0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{175F3081-72E5-4D23-BC55-4BFC9F6B1966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{175F3081-72E5-4D23-BC55-4BFC9F6B1966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{175F3081-72E5-4D23-BC55-4BFC9F6B1966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136EA958-3DDD-44B8-B357-E6AFCBF43A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136EA958-3DDD-44B8-B357-E6AFCBF43A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136EA958-3DDD-44B8-B357-E6AFCBF43A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136EA958-3DDD-44B8-B357-E6AFCBF43A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

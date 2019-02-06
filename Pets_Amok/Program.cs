@@ -112,7 +112,7 @@ namespace Pets_Amok
                         break;
                     case "2": //Visit the veterinarian
                         Console.WriteLine("\t\t===== You  have taken {0} to the veterinarian ===== ", anypet.Name);
-                        anypet.Visit_To_Doctor();
+                        anypet.PetMaintenance();
                         anypet.Status();
                         break;
                     case "3": //Play with your pet

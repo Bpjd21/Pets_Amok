@@ -24,7 +24,7 @@ namespace Pets_Amok.test
             //ARRANGE
             PetClass dog = new PetClass();
             //ACT
-            dog.Visit_To_Doctor();
+            dog.PetMaintenance();
             // ASSERT
             Assert.Equal(40, dog.Entertain);
         }
@@ -34,7 +34,7 @@ namespace Pets_Amok.test
             //ARRANGE
             PetClass dog = new PetClass();
             //ACT
-            int health_level = dog.Visit_To_Doctor();
+            int health_level = dog.PetMaintenance();
             //ASSERT
             Assert.Equal(60, health_level);
         }
@@ -55,7 +55,7 @@ namespace Pets_Amok.test
             //ARRANGE
             PetClass mypet = new PetClass();
             //ACT
-            mypet.Visit_To_Doctor();
+            mypet.PetMaintenance();
             int expected = mypet.Hunger;
             //ASSERT
             Assert.Equal(40, expected);

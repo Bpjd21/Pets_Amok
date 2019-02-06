@@ -58,7 +58,7 @@ namespace Pets_Amok
         {
             for (int i = 0; i < Pet.Count; i++)
             {
-                Pet[i].Visit_To_Doctor();
+                Pet[i].PetMaintenance();
             }
         }
         public void Cage() //Under Construction!
