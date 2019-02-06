@@ -7,7 +7,7 @@ namespace Pets_Amok.test
     public class PetClasstest
     {
         [Fact]
-        public void Create_instance_test()
+        public void Create_instance_test()//get rid of this
         {
             new PetClass();
         }
@@ -24,9 +24,9 @@ namespace Pets_Amok.test
             //ARRANGE
             PetClass dog = new PetClass();
             //ACT
-            dog.PetMaintenance();
+            dog.Play();
             // ASSERT
-            Assert.Equal(40, dog.Entertain);
+            Assert.Equal(5, dog.Entertain);
         }
         [Fact]
         public void Test_health()
@@ -34,20 +34,20 @@ namespace Pets_Amok.test
             //ARRANGE
             PetClass dog = new PetClass();
             //ACT
-            int health_level = dog.PetMaintenance();
+            dog.PetMaintenance();
             //ASSERT
-            Assert.Equal(60, health_level);
+            Assert.Equal(5, dog.Health);
         }
         [Fact]
         public void Test_Hunger_Levels_Increase()
         {
             //ARRANGE
             PetClass pet = new PetClass();
-            pet.Feed();
+            
             //ACT
-            int expected = pet.Hunger;
+            pet.Feed();
             //ASSERT
-            Assert.Equal(60, expected);
+            Assert.Equal(5, pet.Hunger);
         }
         [Fact]
         public void Test_hunger_level_AFTER_VISIT_TO_DR() //Visit to doctor should decreases hunger by 10
@@ -56,9 +56,9 @@ namespace Pets_Amok.test
             PetClass mypet = new PetClass();
             //ACT
             mypet.PetMaintenance();
-            int expected = mypet.Hunger;
+            mypet.Feed();
             //ASSERT
-            Assert.Equal(40, expected);
+            Assert.Equal(10, mypet.Feed());
         }
         [Fact]
         public void Test_constructor() //After create constructor testing if Name holds  value

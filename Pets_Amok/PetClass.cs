@@ -22,11 +22,12 @@ namespace Pets_Amok
         {
 
         }
+        
 
         //Pet's status       
-        int health=50;  //min 0 max 100
-        int hunger=50 ; //min 0 max 100
-        int entertain=50 ; //min 0 max 100
+        int health=0;  //min 0 max 100
+        int hunger=0; //min 0 max 100
+        int entertain=0; //min 0 max 100
 
         public int Health
         {
@@ -84,16 +85,10 @@ namespace Pets_Amok
             return Hunger;                          
         }
         //Pet details
-        public void Info()
-        {
-            Console.WriteLine("My name is " + Name + "  . I am a " + Species + ".  I am  " + Age + " years old!! ");
-        }
-        public void Status()//leave for now
-        { 
-               Console.WriteLine("\t\t\t Hunger :  {0}",Hunger);
-               Console.WriteLine("\t\t\t Health :  {0}", Health);
-               Console.WriteLine("\t\t\t Entertainment : {0}",Entertain);
-        }
+        
+        
+            
+        
         public void Rename(string new_name)
         {
             Name = new_name;

@@ -108,20 +108,20 @@ namespace Pets_Amok
                     case "1"://Feed your pet
                         Console.WriteLine("\t\t=====You have fed {0}===== ", anypet.Name);
                         anypet.Feed();
-                        anypet.Status();
+                        //anypet.Status();
                         break;
                     case "2": //Visit the veterinarian
                         Console.WriteLine("\t\t===== You  have taken {0} to the veterinarian ===== ", anypet.Name);
                         anypet.PetMaintenance();
-                        anypet.Status();
+                        //anypet.Status();
                         break;
                     case "3": //Play with your pet
                         Console.WriteLine("\t\t===== You  have played with {0} ===== ", anypet.Name);
                         anypet.Play();
-                        anypet.Status();
+                        //anypet.Status();
                         break;
                     case "4"://View status of your pet
-                        anypet.Status();
+                        //anypet.Status();
                         break;
                     case "5": //Rename Pet
                         Console.WriteLine("Please type the name in which you would like your pet to be called");

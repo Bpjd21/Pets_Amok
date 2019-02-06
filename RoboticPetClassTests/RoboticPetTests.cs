@@ -3,22 +3,10 @@ using Xunit;
 using Pets_Amok;
 namespace RoboticPetClassTests
 {
-    public class UnitTest1
+    public class RoboticPetTest
     {
-        [Fact]
-        public void CanCreateARoboticPetTest()//work in progress need a list
-        {
-            //Arrange
-            var Test = new RoboticPetClass("Bob", 8, "Dog");
-
-            //Act
-
-
-            //Assert
-            //Assert.NotEmpty
-
-
-        }
+     //create instance is in progress
+        
         [Fact]
         public void CanChargeRoboticPet()
         {
