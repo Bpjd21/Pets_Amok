@@ -39,6 +39,10 @@ namespace Pets_Amok
             {
                 Pet.Add(new RoboticPetClass(name, age, specie));
             }
+            else
+            {
+                Console.WriteLine("Incorrect response please enter 'O' or 'R'");
+            }
         }
         public void Adopt(int Id)
         {
@@ -58,7 +62,7 @@ namespace Pets_Amok
                 {
                     type = "Organic";
                 }
-                Console.WriteLine("   {0}   {1}     {2}    {3}  {4}   {5}    {6}            {7}",
+                Console.WriteLine("   {0}   {1}     {2}    {3}  {4}   {5}      {6}          {7}",
                    i.ToString().PadRight(2),
                    Pet[i].Name.PadRight(8).ToString(),
                    Pet[i].Age.ToString().PadRight(2),
