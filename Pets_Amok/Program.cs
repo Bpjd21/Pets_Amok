@@ -14,7 +14,7 @@ namespace Pets_Amok
         
         static void Menu(Shelter myshelter)
         {
-            Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
+            Console.WriteLine("\t\t\tHello! Welcome to Virtual Pets, Inc. \n\nHere we have created a virtual interactive full spectrum pet experience.");
             Console.WriteLine("");
             Console.WriteLine("\nSelect from the options below.");
             Console.WriteLine("\n\t\t\t======== Main_Menu ========");
