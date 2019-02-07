@@ -4,7 +4,7 @@ using Pets_Amok;
 using System.Collections.Generic;
 namespace Pets_Amok.test
 {
-    public class PetClasstest
+    public class OrganicPetClass
     {
         [Fact]
         public void Create_instance_test()//get rid of this

@@ -6,11 +6,8 @@ namespace Pets_Amok.test
 {
     public class PetClasstest
     {
-        [Fact]
-        public void Create_instance_test()//get rid of this
-        {
-            new PetClass();
-        }
+
+
         [Fact]
         public void Test_Name()
         {
@@ -43,7 +40,7 @@ namespace Pets_Amok.test
         {
             //ARRANGE
             PetClass pet = new PetClass();
-            
+
             //ACT
             pet.Feed();
             //ASSERT
@@ -64,9 +61,9 @@ namespace Pets_Amok.test
         public void Test_constructor() //After create constructor testing if Name holds  value
         {
             //ARRANGE
-            PetClass pet = new PetClass("Bob",12,"Lion");
+            PetClass pet = new PetClass("Bob", 12, "Lion");
             //ACT
-            string  testname = pet.Name;
+            string testname = pet.Name;
             //ASSERT
             Assert.Equal("Bob", testname);
         }

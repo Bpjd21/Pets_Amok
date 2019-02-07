@@ -25,9 +25,9 @@ namespace Pets_Amok
         
 
         //Pet's status       
-        int health=0;  //min 0 max 100
-        int hunger=0; //min 0 max 100
-        int entertain=0; //min 0 max 100
+        int health;  //min 0 max 100
+        int hunger; //min 0 max 100
+        int entertain; //min 0 max 100
 
         public int Health
         {
@@ -64,13 +64,13 @@ namespace Pets_Amok
             }
         }
         // entertainment with pet
-        public int Play()
+        public  int Play()
         {
             Entertain = Entertain + 5;
             Hunger = Hunger - 5;
-          return Entertain;
+            return Entertain;
         }
-        public int PetMaintenance()
+        public  int PetMaintenance()
         {
             Health = Health + 5;
             Hunger = Hunger - 5;
@@ -78,7 +78,7 @@ namespace Pets_Amok
             return Health;
         }
 
-        public int Feed()
+        public  int Feed()
         {
             Hunger = Hunger + 5;
             Entertain = Entertain + 5;
@@ -99,6 +99,7 @@ namespace Pets_Amok
             Health = Health - 5;
             Hunger = Hunger - 5;
         }
+        
 }
 }
 
