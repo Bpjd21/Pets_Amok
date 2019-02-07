@@ -5,12 +5,12 @@ using System.Text;
 namespace Pets_Amok
 {
     public class PetClass
-    {      
+    {
         //Pet attritbutes
-        public int Age { get ;  set ;} //Pet's Age
-        public string Name { get ;  set ; }//Pet's Name
-        public string Species{ get ;  set ; }//Pet's Specie
-        private int Cage { get; set; } // 
+        public int Age { get; set; } //Pet's Age
+        public string Name { get; set; }//Pet's Name
+        public string Species { get; set; }//Pet's Specie
+
         //Constructors
         public PetClass(string name, int age, string species)
         {
@@ -22,7 +22,7 @@ namespace Pets_Amok
         {
 
         }
-        
+
 
         //Pet's status       
         int health;  //min 0 max 100
@@ -31,32 +31,36 @@ namespace Pets_Amok
 
         public int Health
         {
-            get {
-                
+            get
+            {
+
                 return health;
-                }
-            set {
-                if (value > -1 &&value<101 )
+            }
+            set
+            {
+                if (value > -1 && value < 101)
                 {
                     health = value;
                 }
                 else
                 {
-                    
+
 
                 }
             }
         }
-          
-        
+
+
         public int Entertain
         {
-           get { return entertain; }
-           set {
+            get { return entertain; }
+            set
+            {
                 if (value > -1 && value < 101) { entertain = value; }
             }
-        } 
-        public int Hunger {
+        }
+        public int Hunger
+        {
             get { return hunger; }
             set
             {
@@ -64,42 +68,34 @@ namespace Pets_Amok
             }
         }
         // entertainment with pet
-        public  int Play()
+        public virtual void Play() //play
         {
-            Entertain = Entertain + 5;
-            Hunger = Hunger - 5;
-            return Entertain;
+
+
         }
-        public  int PetMaintenance()
+        public virtual void PetMaintenance() //take to dr or maintnance
         {
-            Health = Health + 5;
-            Hunger = Hunger - 5;
-            Entertain = Entertain - 5;
-            return Health;
+
         }
 
-        public  int Feed()
+        public virtual void Feed()
         {
-            Hunger = Hunger + 5;
-            Entertain = Entertain + 5;
-            return Hunger;                          
+
         }
         //Pet details
-        
-        
-            
-        
+
+
+
+
         public void Rename(string new_name)
         {
             Name = new_name;
         }
-        public  void Tick()
-        { 
-            Entertain = Entertain - 5;
-            Health = Health - 5;
-            Hunger = Hunger - 5;
+        public virtual void Tick()
+        {
+
         }
-        
-}
+
+    }
 }
 

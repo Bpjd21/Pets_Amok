@@ -39,10 +39,6 @@ namespace Pets_Amok
             {
                 Pet.Add(new RoboticPetClass(name, age, specie));
             }
-            else
-            {
-                Console.WriteLine("Incorrect response please enter 'O' or 'R'");
-            }
         }
         public void Adopt(int Id)
         {
@@ -51,7 +47,7 @@ namespace Pets_Amok
         public void Print_List()
         {
             string type = "";
-            Console.WriteLine("   ID | NAME      | AGE | SPECIE | HUNGER | HEALTH | ENTERTAINMENT |   TYPE");
+            Console.WriteLine("\tID | NAME      |AGE|SPECIE|HUNGER|HEALTH|ENTERTAINMENT|   TYPE");
             for (int i = 0; i < Pet.Count; i++)
             {
                 if (Pet[i].GetType() == typeof(RoboticPetClass))
@@ -62,7 +58,7 @@ namespace Pets_Amok
                 {
                     type = "Organic";
                 }
-                Console.WriteLine("   {0}   {1}     {2}    {3}  {4}   {5}      {6}          {7}",
+                Console.WriteLine("\t{0}   {1}    {2}  {3} {4} {5}  {6}         {7}",
                    i.ToString().PadRight(2),
                    Pet[i].Name.PadRight(8).ToString(),
                    Pet[i].Age.ToString().PadRight(2),
@@ -80,6 +76,13 @@ namespace Pets_Amok
                 Pet[i].Feed();
             }
         }
+        public void Playwithall()
+        {
+            for (int i = 0; i < Pet.Count; i++)
+            {
+                Pet[i].Play();
+            }
+        }
         public void TakeallofthemtoDoctor()
         {
             for (int i = 0; i < Pet.Count; i++)
@@ -87,8 +90,6 @@ namespace Pets_Amok
                 Pet[i].PetMaintenance();
             }
         }
-        public void Cage() //Under Construction!
-        { }
         public PetClass Select_Pet(int id)
         {
             return Pet[id];
@@ -128,5 +129,12 @@ namespace Pets_Amok
 
         }
 
+        public void Checkup()
+        {
+            for (int i = 0; i < Pet.Count; i++)
+            {
+                Pet[i].PetMaintenance();
+            }
+        }
     }
 }

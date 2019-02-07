@@ -23,6 +23,31 @@ namespace Pets_Amok
             Console.WriteLine("\t\t\t Oil Level :  {0}", Health);
             Console.WriteLine("\t\t\t Entertainment : {0}", Entertain);
         }
+        public override void Play()
+        {
+            Entertain = Entertain + 10;
+            Hunger = Hunger - 5;
 
+        }
+        public override void PetMaintenance()
+        {
+            Health = Health + 5;
+            Hunger = Hunger - 5;
+            Entertain = Entertain - 5;
+
+        }
+
+        public override void Feed()
+        {
+            Hunger = Hunger + 20;
+            Entertain = Entertain + 5;
+
+        }
+        public override void Tick()
+        {
+            Entertain = Entertain - 5;
+            Health = Health - 5;
+            Hunger = Hunger - 5;
+        }
     }
 }

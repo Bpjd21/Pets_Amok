@@ -17,7 +17,7 @@ namespace RoboticPetClassTests
             TestRoboticPet.Feed();
 
             //Assert
-            Assert.Equal(95, TestRoboticPet.Hunger);
+            Assert.Equal(90, TestRoboticPet.Hunger);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace RoboticPetClassTests
             TestRoboticPet.Play();
 
             //Assert
-            Assert.Equal(95, TestRoboticPet.Entertain);
+            Assert.Equal(90, TestRoboticPet.Entertain);
 
         }
     }
