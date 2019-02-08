@@ -27,7 +27,7 @@ namespace Pets_Amok
             Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
             Console.WriteLine("\t\t\tPress 6 to play with all pets in the shelter");
             Console.WriteLine("\t\t\tPress 7 to take all the pets for a check-up");
-            Console.WriteLine("\t\t\tPress 8 to take care of all the pets in the shelter");
+            
             Console.WriteLine("\t\t\tPress 0 to quit");
             bool running = true;
 
@@ -75,19 +75,19 @@ namespace Pets_Amok
                     case "4":  //Adopts pet from Shelter (removes from list)
                         Console.Clear();
                         myshelter.Print_List();
-                        Console.WriteLine("Please type ID of the pet you wish to adopt");
+                        Console.WriteLine("\nPlease type ID of the pet you wish to adopt");
                         int ID = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
-                        Console.WriteLine("Congratulations on your new adoption.");
-                        Console.WriteLine("Press 2 to return to the shelter");
+                        Console.WriteLine("Congratulations on adopting your new pet\n");
+                        Console.WriteLine("Press 2 to return to the shelter\nPress 0 to leave game and go enjoy your new pet!");
                         myshelter.Adopt(ID);
                         break;
                     case "5": //
                         Console.Clear();
-                        myshelter.Print_List();
                         myshelter.FeedAll();
-                        Console.WriteLine("You fed the whole Shelter");
-                        Console.WriteLine("Press 2 to return to the shelter");
+                        myshelter.Print_List();
+                        Console.WriteLine("\nYou fed the whole Shelter");
+                        Console.WriteLine("\nPress 2 to return to the shelter");
                         break;
                   
                     case "6"://play with all of them
@@ -95,16 +95,16 @@ namespace Pets_Amok
 
                         myshelter.Print_List();
                         Console.WriteLine("\nYou played with the whole Shelter");
-                        Console.WriteLine("\n");
+                        
                         myshelter.Playwithall();
-                        Console.WriteLine("Press 2 to return to the shelter");
+                        Console.WriteLine("\nPress 2 to return to the shelter");
                         break;
                     case "7": //Check-up
                         Console.Clear();
                         myshelter.Checkup();
                         myshelter.Print_List();
                         Console.WriteLine("\nYou took all the pets for a check-up");
-                        Console.WriteLine("Press 2 to return to the shelter");
+                        Console.WriteLine("\nPress 2 to return to the shelter");
                         break;
                     case "8": //Check-up
                         myshelter.FeedAll();
@@ -206,7 +206,7 @@ namespace Pets_Amok
             Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
             Console.WriteLine("\t\t\tPress 6 to play with all pets in the shelter");
             Console.WriteLine("\t\t\tPress 7 to take all the pets for a check-up");
-            Console.WriteLine("\t\t\tPress 8 to take care of all the pets in the shelter");
+            
             Console.WriteLine("\t\t\tPress 0 to quit");
         }
        

@@ -91,14 +91,14 @@ namespace Pets_Amok
         {
             for (int i = 0; i < Pet.Count; i++)
             {
-                Pet[i].Feed();
+                Pet[i].Hunger=100;
             }
         }
         public void Playwithall()
         {
             for (int i = 0; i < Pet.Count; i++)
             {
-                Pet[i].Play();
+                Pet[i].Entertain=100;
             }
         }
         public void TakeallofthemtoDoctor()
@@ -144,7 +144,7 @@ namespace Pets_Amok
         {
             for (int i = 0; i < Pet.Count; i++)
             {
-                Pet[i].PetMaintenance();
+                Pet[i].Health=100;
             }
         }
     }
