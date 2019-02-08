@@ -8,9 +8,9 @@ namespace Pets_Amok
     {
         public OrganicPetClass(string name, int age, string species) : base(name, age, species)
         {
-            Health = 50;
-            Hunger = 50;
-            Entertain = 50;
+            Health = 70;
+            Hunger = 70;
+            Entertain = 70;
         }
         public void Info()
         {

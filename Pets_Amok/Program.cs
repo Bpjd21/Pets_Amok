@@ -16,19 +16,18 @@ namespace Pets_Amok
         static void Menu(Shelter myshelter)
         {
             
-            Console.WriteLine("Hello! Welcome to Virtual Pets, Inc. Here we have created a virtual interactive full spectrum pet experience.");
+            Console.WriteLine("\t\t\tHello! Welcome to Virtual Pets, Inc. \n\n\t\tA virtual interactive full spectrum pet experience");
             Console.WriteLine("");
-            Console.WriteLine("\nplease select from the options below.");
-            Console.WriteLine("\n\t\t\t======== Main_Menu ========");
-            Console.WriteLine("\t\t\tPress 1 to create your a pet ");
-            Console.WriteLine("\t\t\tPress 2 to view available pets in shelter");
-            Console.WriteLine("\t\t\tPress 3 to interact with another pet");
-            Console.WriteLine("\t\t\tPress 4 to Adopt pet from the shelter");
-            Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
-            Console.WriteLine("\t\t\tPress 6 to play with all pets in the shelter");
-            Console.WriteLine("\t\t\tPress 7 to take all the pets for a check-up");
+            Console.WriteLine("\n\t\t   SELECT FROM THE OPTIONS BELOW TO START GAME\n");
             
-            Console.WriteLine("\t\t\tPress 0 to quit");
+            Console.WriteLine("\t\tPress 1 to create your a new pet to add to shelter");
+            Console.WriteLine("\t\tPress 2 to view available pets in shelter");
+            //Console.WriteLine("\t\t\tPress 3 to select a pet you want to interact with");
+            //Console.WriteLine("\t\t\tPress 4 to Adopt pet from the shelter");
+            //Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
+            //Console.WriteLine("\t\t\tPress 6 to play with all pets in the shelter");
+            //Console.WriteLine("\t\t\tPress 7 to take all the pets for a check-up");            
+            Console.WriteLine("\t\tPress 0 to quit");
             bool running = true;
 
             while (running)
@@ -40,7 +39,7 @@ namespace Pets_Amok
                 {
                     case "1"://Add Pet in shelter
                         Console.Clear();
-                        Console.WriteLine("\t\t\t\t Create your pet");
+                        Console.WriteLine("\t\t\t\t Create your new pet");
                         Console.Write("\nWhat would you like to name your pet?  ");
                         string name = Console.ReadLine();
                         Console.Write("How old is your pet?  ");
@@ -50,21 +49,21 @@ namespace Pets_Amok
                         myshelter.Add(name, age, species);
                         Console.WriteLine();
                         Console.Clear();
-                        Console.WriteLine("Congratulations!\n\nYou have created " + name + " the " + species + " who is " + age + " years old. \n\n");
+                        Console.WriteLine("\t\tCongratulations!\n\nYou have created " + name + " the " + species + "\n\n");
                         Console.WriteLine("We have moved " + name + " to our shelter");
                         Console.WriteLine("\n \n----Please select from the options below to continue----");
-                        Console.WriteLine("\npress 2 to view all the animals in our shelter");
+                        Console.WriteLine("\npress 2 to go to shelter and interact with the pets");
                         Console.WriteLine("press 0 to quit");
                         break;
                     case "2"://View the whole shelter
                         Console.Clear();
-                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland, OH\n");
+                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland\n");
                         myshelter.Print_List();
                         options();
                         // Console.WriteLine("\n\nPress 3 to select a pet to interact with");
                         break;
-                    case "3":
-                        Console.WriteLine("Please type ID to select your pet"); //Pet Selector
+                    case "3": //Pet Selector
+                        Console.WriteLine("Please type ID to select your pet");
                         int id = Convert.ToInt32(Console.ReadLine());
                         myshelter.Select_Pet(id);
                         Console.Clear();
@@ -74,6 +73,7 @@ namespace Pets_Amok
                         break;
                     case "4":  //Adopts pet from Shelter (removes from list)
                         Console.Clear();
+                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland\n");
                         myshelter.Print_List();
                         Console.WriteLine("\nPlease type ID of the pet you wish to adopt");
                         int ID = Convert.ToInt32(Console.ReadLine());
@@ -82,43 +82,36 @@ namespace Pets_Amok
                         Console.WriteLine("Press 2 to return to the shelter\nPress 0 to leave game and go enjoy your new pet!");
                         myshelter.Adopt(ID);
                         break;
-                    case "5": //
+                    case "5": //feeds all pets
                         Console.Clear();
                         myshelter.FeedAll();
+                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland\n");
                         myshelter.Print_List();
                         Console.WriteLine("\nYou fed the whole Shelter");
-                        Console.WriteLine("\nPress 2 to return to the shelter");
+                        Console.WriteLine("\nPress 2 to see interaction memu again");
                         break;
                   
                     case "6"://play with all of them
                         Console.Clear();
-
+                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland\n");
                         myshelter.Print_List();
-                        Console.WriteLine("\nYou played with the whole Shelter");
-                        
+                        Console.WriteLine("\nYou played with the whole Shelter");                        
                         myshelter.Playwithall();
-                        Console.WriteLine("\nPress 2 to return to the shelter");
+                        Console.WriteLine("\nPress 2 to see interaction memu again");
                         break;
-                    case "7": //Check-up
+                    case "7": //took all pets to technician
                         Console.Clear();
                         myshelter.Checkup();
+                        Console.WriteLine("\n\t\t\tVirtual Pets, Inc. Shelter\n\t\t\tTerminal Tower, Cleveland\n");
                         myshelter.Print_List();
                         Console.WriteLine("\nYou took all the pets for a check-up");
-                        Console.WriteLine("\nPress 2 to return to the shelter");
-                        break;
-                    case "8": //Check-up
-                        myshelter.FeedAll();
-                        myshelter.Playwithall();
-                        myshelter.Checkup();
-                        myshelter.Print_List();
-                        Console.WriteLine("\nYou took all the pets for a check-up");
-                        Console.WriteLine("Press 2 to return to the shelter");
-                        break;
+                        Console.WriteLine("\nPress 2 to see interaction memu again");
+                        break;                
                     case "0"://Close the program
                         running = false;
                         break;
                     default:
-                        Console.WriteLine("You pressed wrong number");
+                        Console.WriteLine("You selected an invaild response please select 1 thru 7 to continue or 0 to exit game");
                         break;
                 }
                 myshelter.TickAllOfThem();
@@ -199,14 +192,14 @@ namespace Pets_Amok
         {
             
             
-            Console.WriteLine("\n\n\t\t\tPress 1 to create your a pet ");
-            Console.WriteLine("\t\t\tPress 2 to view available pets in shelter");
-            Console.WriteLine("\t\t\tPress 3 to interact with another pet");
-            Console.WriteLine("\t\t\tPress 4 to Adopt pet from the shelter");
+            Console.WriteLine("\n\n\t\t\tPress 1 to create a new pet");
+            //Console.WriteLine("\t\t\tPress 2 to view available pets in shelter");
+            Console.WriteLine("\t\t\tPress 3 to select which pet you want to interact with");
+            Console.WriteLine("\t\t\tPress 4 to adopt pet from the shelter");
             Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
             Console.WriteLine("\t\t\tPress 6 to play with all pets in the shelter");
             Console.WriteLine("\t\t\tPress 7 to take all the pets for a check-up");
-            
+
             Console.WriteLine("\t\t\tPress 0 to quit");
         }
        
