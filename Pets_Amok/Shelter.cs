@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Pets_Amok
 {
-    class Shelter
+   public  class Shelter
     {
 
         public List<PetClass> Pet { get; set; }
@@ -25,20 +25,37 @@ namespace Pets_Amok
                 new RoboticPetClass("Killer", 5, "Dog")
         };
 
-
-        }
+       }
         public void Add(string name, int age, string specie)  // Create Pet 
         {
+
             Console.WriteLine("Type 'o' to create an organic pet or 'r'  to create a robotic pet");
-            string type = Console.ReadLine();
-            if (type.ToLower().Equals("o"))
+            
+            bool flag = true;
+            string input;
+
+            while (flag)
             {
-                Pet.Add(new OrganicPetClass(name, age, specie));
+                input = Console.ReadLine();
+             
+                switch (input.ToLower())
+                {
+                    case "o":
+                        Pet.Add(new OrganicPetClass(name, age, specie));
+                        flag = false;
+                        break;
+                    case "r":
+                        Pet.Add(new RoboticPetClass(name, age, specie));
+                        flag = false;
+                        break;
+                    default:
+                           Console.WriteLine("Wrong Entry! Type 'o' or 'r' ");
+                        break;
+                }
             }
-            else if (type.ToLower().Equals("r"))
-            {
-                Pet.Add(new RoboticPetClass(name, age, specie));
-            }
+
+
+     
         }
         public void Adopt(int Id)
         {
@@ -47,7 +64,7 @@ namespace Pets_Amok
         public void Print_List()
         {
             string type = "";
-            Console.WriteLine("\tID | NAME      |AGE|SPECIE|HUNGER|HEALTH|ENTERTAINMENT|   TYPE");
+            Console.WriteLine("   ID | NAME      | AGE | SPECIE | HUNGER | HEALTH | ENTERTAINMENT |   TYPE");
             for (int i = 0; i < Pet.Count; i++)
             {
                 if (Pet[i].GetType() == typeof(RoboticPetClass))
@@ -58,7 +75,7 @@ namespace Pets_Amok
                 {
                     type = "Organic";
                 }
-                Console.WriteLine("\t{0}   {1}    {2}  {3} {4} {5}  {6}         {7}",
+                Console.WriteLine("   {0}   {1}     {2}    {3}  {4}   {5}      {6}          {7}",
                    i.ToString().PadRight(2),
                    Pet[i].Name.PadRight(8).ToString(),
                    Pet[i].Age.ToString().PadRight(2),
@@ -68,6 +85,7 @@ namespace Pets_Amok
                    Pet[i].Entertain.ToString().PadRight(2),
                    type.ToString().PadRight(8));
             }
+ 
         }
         public void FeedAll()
         {
@@ -102,14 +120,8 @@ namespace Pets_Amok
                 Pet[i].Tick();
             }
         }
-        public void Checkstats()
-        {
-            for (int i = 0; i < Pet.Count; i++)
-            {
-                //   
-            }
-        }
-        public static void Status(PetClass pet) //work at home linq
+       
+        public static void Status(PetClass pet)
         {
             RoboticPetClass robotic;
             OrganicPetClass organic;
@@ -128,8 +140,7 @@ namespace Pets_Amok
             }
 
         }
-
-        public void Checkup()
+       public void Checkup()
         {
             for (int i = 0; i < Pet.Count; i++)
             {

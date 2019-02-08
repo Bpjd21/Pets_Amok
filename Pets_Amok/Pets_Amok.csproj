@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="RoboticPetClass.cs~RF7c7949a.TMP" />
+  </ItemGroup>
+
 </Project>

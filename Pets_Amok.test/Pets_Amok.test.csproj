@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Pets_Amok\Pets_Amok.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ShelterTest.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

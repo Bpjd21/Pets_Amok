@@ -4,10 +4,8 @@ using Pets_Amok;
 using System.Collections.Generic;
 namespace Pets_Amok.test
 {
-    public class PetClasstest
+    public class OrganicPetTest
     {
-
-
         [Fact]
         public void Test_Name()
         {
