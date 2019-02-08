@@ -125,25 +125,24 @@ namespace Pets_Amok
                         Console.WriteLine();
                         anypet.Feed();
                         Shelter.Status(anypet);
-                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is now full!\n\n\t\tPress 0 to return back to the shelter.\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".");
+                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is no longer hungry!\n\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".\n\n\t\tPress 0 for other options.");
                         //anypet.Status();
                         break;
                     case "2": //Visit the veterinarian
                         Console.Clear();
                         Console.WriteLine("\t\t===== You  have taken {0} to the technician ===== ", anypet.Name);
-                        anypet.PetMaintenance();
                         Console.WriteLine();
+                        anypet.PetMaintenance();
                         Shelter.Status(anypet);
-                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is feeling great!\n\n\t\tPress 0 to return back to the shelter.\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".");
+                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is feeling great now!\n\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".\n\n\t\tPress 0 for other options.");
                         break;
                     case "3":
                         Console.Clear();//Play with your pet
                         Console.WriteLine("\t\t===== You  have played with {0} ===== ", anypet.Name);
+                        Console.WriteLine();
                         anypet.Play();
-                        Console.WriteLine();
-                        Shelter.Status(anypet);
-                        Console.WriteLine();
-                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is super happy!\n\n\t\tPress 0 to return back to the shelter.\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".");
+                        Shelter.Status(anypet);                        
+                        Console.WriteLine("\n\n\t\tThank you! " + anypet.Name + " is very happy now!\n\n\t\tPress 1 to feed with " + anypet.Name + "\n\t\tPress 2 to take " + anypet.Name + " to the technician.\n\t\tPress 3 to play with " + anypet.Name + ".\n\n\t\tPress 0 for other options.");
                         break;
                     case "4"://View status of your pet
                         Shelter.Status(anypet);
@@ -156,7 +155,7 @@ namespace Pets_Amok
                         break;
                     case "0"://Close the program
                         runnapp = false;
-                        Console.WriteLine("Press 2 to return back to the shelter to view all the pets we have");
+                        Console.WriteLine("Press 2 to return back to shelter");
                         break;
                     default:
                         Console.WriteLine("Invalid response please select option from the menu again");
@@ -167,7 +166,7 @@ namespace Pets_Amok
      
         static void options()
         {  
-            Console.WriteLine("\n\n\t\t\tPress 1 to create a new pet");
+            Console.WriteLine("\n\n\t\t\tPress 1 to create a new pet");            
             Console.WriteLine("\t\t\tPress 3 to select which pet you want to interact with");
             Console.WriteLine("\t\t\tPress 4 to adopt pet from the shelter");
             Console.WriteLine("\t\t\tPress 5 to feed all of the pets in the shelter");
